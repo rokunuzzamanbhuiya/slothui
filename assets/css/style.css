@@ -36,6 +36,14 @@ body {
     margin: auto;
 }
 
+@media (max-width: 1260px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
 h1,
 h2,
 h3,
@@ -207,7 +215,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     background: #fff;
     /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); */
     z-index: 1112;
@@ -216,7 +224,7 @@ a {
 
 .header-area {
     width: 100%;
-    /* padding: 20px 0; */
+    /* padding: 15px 0; */
 }
 
 .transparent-header {
@@ -234,6 +242,14 @@ a {
     justify-content: space-between;
 }
 
+
+@media (max-width: 992px) {
+    .header-menu {
+        display: none;
+    }
+}
+
+
 .header-menu ul li {
     display: inline-block;
     margin-left: 30px;
@@ -247,7 +263,7 @@ a {
 
 .header-btn .signup-btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 13px 19px;
     font-size: 16px;
     font-weight: 700;
     color: #475569;
@@ -258,9 +274,15 @@ a {
     transition: all .3s ease-in-out;
 }
 
+.header-btn .signup-btn:hover {
+    color: #ffffff;
+    background: #4F46E5;
+    border: 1px solid #4F46E5;
+}
+
 .header-btn .login-btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 13px 19px;
     font-size: 16px;
     font-weight: 700;
     color: #ffffff;
@@ -271,16 +293,42 @@ a {
     transition: all .3s ease-in-out;
 }
 
+.header-btn .login-btn:hover {
+    color: #475569;
+    background: transparent;
+    border: 1px solid #CBD5E1;
+}
+
+@media (max-width: 992px) {
+    .header-signup-login-btn {
+        display: none;
+    }
+}
+
+.header-offcanvas-toogle {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .header-offcanvas-toogle {
+        display: inline-block;
+    }
+}
+
+.header-offcanvas-toogle {
+    cursor: pointer;
+}
+
 /*----------------------------------------*/
 /*  1.5 Hero Area Styles
 /*----------------------------------------*/
 .hero-area {
     position: relative;
-    padding-top: 240px;
-    padding-bottom: 100px;
-    background: linear-gradient(180deg, #ffffff 0%, #c7c4f2 100%);
-
+    overflow: hidden;
+    padding-top: 180px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(159, 171, 240) 100%);
 }
+
 
 .hero-content {
     margin: auto;
@@ -288,23 +336,48 @@ a {
 }
 
 .hero-content .hero-subtitle {
+    display: inline-block;
     font-size: 14px;
     font-weight: 600;
     color: #4F46E5;
     background: #EEF2FF;
-    padding: 10px 20px;
-    border-radius: 100%;
+    padding: 8px 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
 }
 
 .hero-content .hero-title {
     font-size: 60px;
     font-weight: 800;
+    margin-bottom: 24px;
 }
-
 
 .hero-btn {
     margin: auto;
     text-align: center;
+    margin-top: 45px;
+}
+
+.hero-image {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.hero-image .hero-img1 {
+    position: relative;
+    max-width: 100%;
+}
+
+.hero-image .hero-img2 {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    right: -40px;
+    bottom: 0;
 }
 
 /*----------------------------------------*/
