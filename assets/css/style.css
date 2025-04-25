@@ -352,6 +352,12 @@ a {
     margin-bottom: 24px;
 }
 
+.hero-content p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
 .hero-btn {
     margin: auto;
     text-align: center;
@@ -369,6 +375,7 @@ a {
 .hero-image .hero-img1 {
     position: relative;
     max-width: 100%;
+    left: -50px;
 }
 
 .hero-image .hero-img2 {
@@ -376,7 +383,7 @@ a {
     width: 100%;
     max-width: 400px;
     height: auto;
-    right: -40px;
+    right: 10px;
     bottom: 0;
 }
 
@@ -385,11 +392,49 @@ a {
 /*----------------------------------------*/
 .brand-area {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 48px;
     text-align: center;
     background: #F8FAFC;
 }
 
 .brand-area img {
-    margin: 10px 20px;
+    margin: 14px 20px;
+}
+
+/*----------------------------------------*/
+/*  1.7 Feature Area Styles
+/*----------------------------------------*/
+.feature-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+
+.feature-title-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.feature-title-wrapper .feature-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4F46E5;
+    background: #EEF2FF;
+    padding: 8px 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.feature-title-wrapper .feature-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.feature-title-wrapper p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 24px;
 }
