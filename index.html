@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slothui - SAAS Landing Page HTML Template</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -31,7 +32,7 @@
                     </div>
 
                     <div class="header-menu">
-                        <nav>
+                        <nav class="header-mobile-menu-active">
                             <ul>
                                 <li><a href="#">Features</a></li>
                                 <li><a href="#">Achievements</a></li>
@@ -56,6 +57,47 @@
         </div>
     </header>
     <!-- Header Area End -->
+
+    <!-- Offcanvas Area Start -->
+    <div class="header-offcanvas">
+        <div class="header-offcanvas-wrapper">
+            <div class="header-offcanvas-header">
+                <div class="header-offcanvas-logo">
+                    <a href="index.html"><img src="assets/img/menu/logo.png" alt="Logo"></a>
+                </div>
+                <div class="header-offcanvas-close">
+                    <button class="header-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+            <div class="header-offcanvas-menu">
+                <nav>
+                    <!-- Here Menu Will Come Automatically Via Javascript / Same Menu as in Header -->
+                </nav>
+            </div>
+
+            <div class="header-offcanvas-info">
+                <h3 class="header-offcanvas-sm-title">Information</h3>
+                <span><a href="tel:19009009000">+1 900 - 900 - 9000</a></span>
+                <span><a href="mailto:contact@example.com">contact@example.com</a></span>
+                <span>North Tower, Toronto, Canada</span>
+            </div>
+            <div class="header-offcanvas-social">
+                <h3 class="header-offcanvas-sm-title">Follow Us</h3>
+                <a class="header-click-close" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="header-click-close" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="header-click-close" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="header-click-close" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="header-offcanvas-btn">
+
+                <a href="#" class="signup-btn">Sign Up</a>
+                <a href="#" class="login-btn">Log In</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="header-offcanvas-overlay"></div>
+    <!-- Offcanvas Area End -->
 
     <!-- Body Main Wrapper Start -->
     <main>
@@ -121,13 +163,99 @@
                         aliquam ut porttitor leo.</p>
                 </div>
 
-            </div>
+                <div class="feature-content">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="assets/img/feature/feature-icon1.png" alt="Feature Icon">
+                        </div>
+                        <h4 class="feature-item-title">Lazy Efficient</h4>
+                        <p>A cras semper auctor neque. Proin libero nunc consequat interdum varius sit. Libero volutpat
+                            sed cras ornare arcu dui
+                            vivamus arcu felis.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="assets/img/feature/feature-icon2.png" alt="Feature Icon">
+                        </div>
+                        <h4 class="feature-item-title">Streamlined Process</h4>
+                        <p>Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Orci porta non
+                            pulvinar neque laoreet.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="assets/img/feature/feature-icon3.png" alt="Feature Icon">
+                        </div>
+                        <h4 class="feature-item-title">Minimum Effort</h4>
+                        <p>Tincidunt eget nullam non nisi est sit amet facilisis magna. Rhoncus dolor purus non enim
+                            praesent elementum.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="assets/img/feature/feature-icon4.png" alt="Feature Icon">
+                        </div>
+                        <h4 class="feature-item-title">Absolutely Easy To Use</h4>
+                        <p>Rutrum quisque non tellus orci ac. Purus viverra accumsan in nisl. Id interdum velit laoreet
+                            id donec ultrices
+                            adisipicing elit.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="assets/img/feature/feature-icon5.png" alt="Feature Icon">
+                        </div>
+                        <h4 class="feature-item-title">Just Sleep & Chill</h4>
+                        <p>Bibendum est ultricies integer quis auctor elit. Ultrices in iaculis nunc sed. A scelerisque
+                            purus semper eget. Facilisi
+                            morbi tempus iaculi.</p>
+
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="assets/img/feature/feature-icon6.png" alt="Feature Icon">
+                        </div>
+                        <h4 class="feature-item-title">Don’t Worry About Life</h4>
+                        <p>Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Risus ultricies tristique nulla
+                            aliquet enim tortor.</p>
+                    </div>
+
+                </div>
         </section>
         <!-- Feature Area End -->
 
         <!-- Statistics Area Start -->
         <section id="statistics" class="statistics-area">
             <div class="container">
+
+                <div class="statistics-title-wrapper">
+                    <div class="statistics-icon">
+                        <img src="assets/img/statistics/statistics-icon.png" alt="Statistics Icon">
+                    </div>
+                    <h2 class="statistics-title">Work lazily and achieve the result you want.</h2>
+                    <p>Liquam id diam maecenas ultricies mi eget mauris pharetra et. Feugiat pretium nibh ipsum <br>
+                        consequat nisl vel pretium
+                        lectus. Fermentum iaculis eu non diam.</p>
+                </div>
+
+                <div class="statistics-content">
+
+                    <div class="statistics-item">
+                        <span class="statistics-number">420%</span>
+                        <h6>Data Efficiency</h6>
+                    </div>
+                    <div class="statistics-item">
+                        <span class="statistics-number">708+</span>
+                        <h6>Conversion Rate</h6>
+                    </div>
+                    <div class="statistics-item">
+                        <span class="statistics-number">1.82M</span>
+                        <h6>AI LLM Scale</h6>
+                    </div>
+
+                </div>
 
             </div>
         </section>
@@ -136,6 +264,14 @@
         <!-- Client Area Start -->
         <section id="client" class="client-area">
             <div class="container">
+
+                <div class="feature-title-wrapper">
+                    <h6 class="feature-subtitle">Who is it for?</h6>
+                    <h2 class="feature-title">What the procrastinators say</h2>
+                    <p>Mi ipsum faucibus vitae aliquet nec. At tempor commodo ullamcorper a <br> lacus. Bibendum at
+                        varius
+                        vel pharetra vel.</p>
+                </div>
 
             </div>
         </section>
