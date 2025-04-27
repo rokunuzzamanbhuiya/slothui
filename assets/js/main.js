@@ -81,7 +81,25 @@ function clientContentTab() {
 document.addEventListener("DOMContentLoaded", clientContentTab);
 
 /*=============================================
-	=    		4. FAQ Accordion			      =
+	=    	4. Load More Testimonials			   =
+=============================================*/
+const loadMoreBtn = document.querySelector(".loadMoreBtn");
+const hiddenCards = document.querySelectorAll(
+  ".testimonialCard[id='hiddenS'], .testimonialCard.hiddenS"
+);
+
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener("click", () => {
+    hiddenCards.forEach((card) => {
+      card.style.display = "block";
+      card.removeAttribute("id");
+      card.classList.remove("hiddenS");
+    });
+    loadMoreBtn.parentElement.style.display = "none";
+  });
+}
+/*=============================================
+	=    		5. FAQ Accordion			      =
 =============================================*/
 document.querySelectorAll(".accordion").forEach((button) => {
   button.addEventListener("click", () => {
