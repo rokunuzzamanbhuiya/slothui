@@ -51,3 +51,53 @@ const tsSideMenu = document.querySelector(".header-offcanvas-menu nav");
 if (tsMenuWrap && tsSideMenu) {
   tsSideMenu.appendChild(tsMenuWrap);
 }
+
+/*=============================================
+	=    		3. Client Tab			      =
+=============================================*/
+function clientContentTab() {
+  const whoContents = document.querySelectorAll(".client-content");
+  const whoImages = document.querySelectorAll(".client-content-wrapper img");
+
+  if (!whoContents.length || !whoImages.length) {
+    console.error("Who section content or images not found!");
+    return;
+  }
+
+  whoContents[0].classList.add("active");
+  whoImages[0].classList.add("active");
+
+  whoContents.forEach((content, index) => {
+    content.addEventListener("click", function () {
+      whoContents.forEach((item) => item.classList.remove("active"));
+      whoImages.forEach((img) => img.classList.remove("active"));
+
+      whoContents[index].classList.add("active");
+      whoImages[index].classList.add("active");
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", clientContentTab);
+
+/*=============================================
+	=    		4. FAQ Accordion			      =
+=============================================*/
+document.querySelectorAll(".accordion").forEach((button) => {
+  button.addEventListener("click", () => {
+    const panel = button.nextElementSibling;
+    const isActive = button.classList.contains("active");
+
+    // Close all other panels
+    document.querySelectorAll(".accordion").forEach((btn) => {
+      btn.classList.remove("active");
+      btn.nextElementSibling.style.display = "none";
+    });
+
+    // Toggle the clicked panel
+    if (!isActive) {
+      button.classList.add("active");
+      panel.style.display = "block";
+    }
+  });
+});

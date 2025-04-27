@@ -217,15 +217,14 @@ a {
     width: 100%;
     padding: 15px 0;
     background: #fff;
-    /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); */
     z-index: 1112;
     transition: all .3s ease-in-out;
 }
 
-.header-area {
+/* .header-area {
     width: 100%;
-    /* padding: 15px 0; */
-}
+    padding: 15px 0;
+} */
 
 .transparent-header {
     background: transparent;
@@ -433,7 +432,7 @@ a {
 
 
 /*----------------------------------------*/
-/*  1.5 Offcanvas CSS
+/*  1.5 Offcanvas Area Styles
 /*----------------------------------------*/
 .header-offcanvas {
     position: fixed;
@@ -519,7 +518,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 
 .header-offcanvas-info span {
     color: #484848;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     display: block;
     margin-bottom: 5px;
@@ -715,7 +714,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.7 Mobile Menu CSS
+/*  1.6 Mobile Menu Area Styles
 /*----------------------------------------*/
 .header-offcanvas-menu {
     margin-bottom: 40px;
@@ -744,7 +743,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.5 Hero Area Styles
+/*  1.7 Hero Area Styles
 /*----------------------------------------*/
 .hero-area {
     position: relative;
@@ -816,7 +815,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.6 Brand Area Styles
+/*  1.8 Brand Area Styles
 /*----------------------------------------*/
 .brand-area {
     padding-top: 50px;
@@ -830,7 +829,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.7 Feature Area Styles
+/*  1.9 Feature Area Styles
 /*----------------------------------------*/
 .feature-area {
     padding-top: 100px;
@@ -862,7 +861,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 .feature-title-wrapper p {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
 }
 
 .feature-content {
@@ -870,6 +869,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    row-gap: 32px;
 }
 
 .feature-content .feature-item {
@@ -880,13 +880,97 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     justify-content: center;
     flex: 1 0 400px;
     max-width: 400px;
-    padding: 10px 10px;
+    padding: 10px 8px;
     text-align: center;
 }
 
+.feature-content .feature-item .feature-icon {
+    margin-bottom: 22px;
+    transition: all 0.3s ease-in-out;
+}
+
+.feature-content .feature-item .feature-icon:hover {
+    margin-bottom: 22px;
+    -webkit-animation: shake 0.3s linear;
+    animation: shake 0.3s linear;
+}
+
+
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translate(1px, 1px) rotate(0deg);
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        -webkit-transform: translate(-3px, 0px) rotate(1deg);
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        -webkit-transform: translate(3px, 2px) rotate(0deg);
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        -webkit-transform: translate(3px, 1px) rotate(-1deg);
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-1px, -1px) rotate(1deg);
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        -webkit-transform: translate(1px, 2px) rotate(0deg);
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+
+.feature-content .feature-item .feature-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 10px;
+}
+
+.feature-content .feature-item p {
+    font-size: 16px;
+}
+
+
+
 
 /*----------------------------------------*/
-/*  1.8 Statistics Area Styles
+/*  1.10 Statistics Area Styles
 /*----------------------------------------*/
 .statistics-area {
     padding-top: 100px;
@@ -921,4 +1005,419 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 24px;
+}
+
+
+
+/*----------------------------------------*/
+/*  1.11 Client Area Styles
+/*----------------------------------------*/
+.client-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* .client-title-wrapper {
+    margin: auto;
+    text-align: center;
+} */
+
+.client-title-wrapper .client-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4F46E5;
+    background: #EEF2FF;
+    padding: 8px 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.client-title-wrapper .client-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.client-title-wrapper p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.client-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+    margin-top: 65px;
+}
+
+.client-content-wrapper img {
+    display: none;
+}
+
+.client-content-wrapper img.active {
+    display: block;
+}
+
+.client-content {
+    border-left: 4px solid #e0e7ff;
+    padding: 32px 24px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.client-content.active {
+    border-color: #4f46e5;
+}
+
+.client-content-wrapper h5 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #475569;
+}
+
+.client-content-wrapper p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #475569;
+    margin-top: 12px;
+}
+
+
+/*----------------------------------------*/
+/*  1.12 Testimonial Area Styles
+/*----------------------------------------*/
+.testimonial-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #F8FAFC;
+}
+
+.testimonial-title-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+
+/*----------------------------------------*/
+/*  1.13 Offer Area Styles
+/*----------------------------------------*/
+.offer-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+/*----------------------------------------*/
+/*  1.14 FAQ Area Styles
+/*----------------------------------------*/
+.faq-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #F8FAFC;
+}
+
+.faq-title-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+
+/* FAQ Items */
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e7ff;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 20px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.accordion:hover,
+.active {
+    background: none;
+}
+
+/* icon and question text */
+.accordion-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    color: #334155;
+}
+
+/* Left icon */
+.accordion-icon {
+    margin-right: 10px;
+}
+
+
+/* toggle-arrow img */
+.toggle-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.accordion.active .toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.panel {
+    padding: 0;
+    display: none;
+    background: none;
+    overflow: hidden;
+}
+
+.panel p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #475569;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+
+.accordion.active+.panel {
+    display: block;
+}
+
+/*----------------------------------------*/
+/*  1.15 CTA Area Styles
+/*----------------------------------------*/
+.cta-area {
+    background: #EEF2FF;
+}
+
+.cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.cta-btn .learn-more {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 13px 19px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4F46E5;
+    background: transparent;
+    border: 1px solid #4F46E5;
+    border-radius: 100px;
+    margin-right: 8px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+
+.cta-btn .learn-more::before {
+    position: absolute;
+    content: "";
+    background: #4F46E5;
+    height: 0;
+    width: 0;
+    border-radius: 100px;
+    right: -11px;
+    bottom: -11px;
+    -moz-transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    z-index: -1;
+}
+
+.cta-btn .learn-more::after {
+    position: absolute;
+    content: "";
+    background: #4F46E5;
+    height: 0;
+    width: 0;
+    border-radius: 100px;
+    top: -11px;
+    left: -11px;
+    -moz-transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    z-index: -1;
+}
+
+.cta-btn .learn-more:hover {
+    color: #ffffff;
+    background: #4F46E5;
+    border: 1px solid #4F46E5;
+}
+
+.cta-btn .learn-more:hover::before {
+    height: 120%;
+    width: 120%;
+}
+
+.cta-btn .learn-more:hover::after {
+    height: 120%;
+    width: 120%;
+}
+
+.cta-btn .get-started {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 13px 19px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #4F46E5;
+    border: 1px solid #4F46E5;
+    border-radius: 100px;
+    margin-right: 10px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+
+.cta-btn .get-started::before {
+    position: absolute;
+    content: "";
+    background: #EEF2FF;
+    height: 0;
+    width: 0;
+    border-radius: 100px;
+    right: -11px;
+    bottom: -11px;
+    -moz-transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    z-index: -1;
+}
+
+.cta-btn .get-started::after {
+    position: absolute;
+    content: "";
+    background: #EEF2FF;
+    height: 0;
+    width: 0;
+    border-radius: 100px;
+    top: -11px;
+    left: -11px;
+    -moz-transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    z-index: -1;
+}
+
+.cta-btn .get-started:hover {
+    color: #4F46E5;
+    background: transparent;
+    border: 1px solid #4F46E5;
+}
+
+.cta-btn .get-started:hover::before {
+    height: 120%;
+    width: 120%;
+}
+
+.cta-btn .get-started:hover::after {
+    height: 120%;
+    width: 120%;
+}
+
+
+
+
+
+/*----------------------------------------*/
+/*  1.16 Footer Area Styles
+/*----------------------------------------*/
+
+footer {
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    background: #F8FAFC;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 20px 0;
+}
+
+.footer-top h6 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+
+.footer-top li {
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    line-height: 30px;
+    color: #475569;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: #CBD5E1;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0 32px 0;
+}
+
+.footer-bottom p {
+    color: #94A3B8;
+}
+
+.footer-scroll-top i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #475569;
+    background: transparent;
+    border-radius: 80px;
+    border: 1px solid #CBD5E1;
+    transition: all .3s ease-in-out;
+}
+
+.footer-scroll-top i:hover {
+    color: #ffffff;
+    background: #4F46E5;
+    border-radius: 80px;
+    border: 1px solid #4F46E5;
 }
