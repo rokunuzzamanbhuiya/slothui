@@ -1310,9 +1310,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     margin-bottom: 10px;
 }
 
-
-
-
 /*----------------------------------------*/
 /*  1.14 FAQ Area Styles
 /*----------------------------------------*/
@@ -1327,12 +1324,17 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     text-align: center;
 }
 
-
-/* FAQ Items */
 .faq-items {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 178px;
+}
+
+@media (max-width: 1200px) {
+    .faq-items {
+        padding: 0 50px;
+    }
 }
 
 .faq-item {
