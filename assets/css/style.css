@@ -966,9 +966,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     font-size: 16px;
 }
 
-
-
-
 /*----------------------------------------*/
 /*  1.10 Statistics Area Styles
 /*----------------------------------------*/
@@ -1324,6 +1321,31 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     text-align: center;
 }
 
+.faq-title-wrapper .faq-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4F46E5;
+    background: #EEF2FF;
+    padding: 8px 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.faq-title-wrapper .faq-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.faq-title-wrapper p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+
+
 .faq-items {
     display: flex;
     flex-direction: column;
@@ -1366,7 +1388,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     background: none;
 }
 
-/* icon and question text */
 .accordion-content {
     display: flex;
     align-items: center;
@@ -1374,13 +1395,10 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     color: #334155;
 }
 
-/* Left icon */
 .accordion-icon {
     margin-right: 10px;
 }
 
-
-/* toggle-arrow img */
 .toggle-arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
