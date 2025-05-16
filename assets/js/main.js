@@ -225,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "img-custom-anim-right",
     "img-custom-anim-left",
     "img-custom-anim-top",
+    "img-custom-anim-bottom",
   ];
 
   // Create an IntersectionObserver
