@@ -212,15 +212,6 @@ a {
     position: relative;
 }
 
-/* .tmponhover {
-    box-shadow: 2px 2px #151220;
-    transition: 0.3s;
-}
-
-.tmponhover:hover {
-    box-shadow: none;
-} */
-
 /*----------------------------------------*/
 /*  2.9 Custom Animation
 /*----------------------------------------*/
@@ -242,23 +233,27 @@ a {
     }
 }
 
-@keyframes tsslideInUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* .fadeInDown {
+    animation: tsFadeInDown 2s ease-out forwards;
+    animation-play-state: paused;
 }
 
+@keyframes tsFadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
 .fadeInLeft {
-    opacity: 0;
-    /* Start invisible */
     animation: tsfadeInLeft 2s ease-out forwards;
-    /* 2 seconds duration, ease-out effect */
+    animation-play-state: paused;
 }
 
 @keyframes tsfadeInLeft {
@@ -266,6 +261,25 @@ a {
         opacity: 0;
         transform: translateX(-20px);
         /* Start slightly to the left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* End at original position */
+    }
+}
+
+.fadeInRight {
+    animation: tsfadeInRight 2s ease-out forwards;
+    animation-play-state: paused;
+}
+
+@keyframes tsfadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+        /* Start slightly to the right */
     }
 
     100% {
@@ -299,6 +313,7 @@ a {
 .slideinup {
     -webkit-animation-name: slideinup;
     animation-name: slideinup;
+    animation-play-state: paused;
 }
 
 @keyframes slideinup {
@@ -308,9 +323,22 @@ a {
     }
 
     100% {
+        opacity: 1;
         transform: translateY(0);
     }
 }
+
+/* @keyframes tsslideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
 
 @keyframes slideinright {
     0% {
@@ -337,6 +365,7 @@ a {
 .slideinleft {
     -webkit-animation-name: slideinleft;
     animation-name: slideinleft;
+    animation-play-state: paused;
 }
 
 @keyframes slideinleft {
@@ -406,7 +435,7 @@ a {
 /*  custom image animation  */
 .img-custom-anim-right {
     animation: img-anim-right 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
-    opacity: 0;
+    animation-play-state: paused;
 }
 
 @keyframes img-anim-right {
@@ -425,7 +454,7 @@ a {
 
 .img-custom-anim-left {
     animation: img-anim-left 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
-    opacity: 0;
+    animation-play-state: paused;
 }
 
 @keyframes img-anim-left {
@@ -444,7 +473,7 @@ a {
 
 .img-custom-anim-top {
     animation: img-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
-    opacity: 0;
+    animation-play-state: running;
 }
 
 @keyframes img-anim-top {
@@ -1156,7 +1185,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     position: relative;
     overflow: hidden;
     padding-top: 180px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(138, 148, 208) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(135, 146, 214) 100%);
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(159, 171, 240) 100%); */
 }
 
@@ -1783,14 +1812,14 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 .client-content-wrapper h5 {
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
     color: #475569;
 }
 
 .client-content-wrapper p {
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
     color: #475569;
     margin-top: 12px;
 }
@@ -1884,7 +1913,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     flex-direction: column;
     gap: 10px;
     background: #F8FAFC;
-    /* z-index: 1; */
 }
 
 .testimonial-cards-container p {
@@ -2314,10 +2342,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     border-radius: 100px;
     right: -11px;
     bottom: -11px;
-    -moz-transition: all 0.5s ease-out 0s;
-    -webkit-transition: all 0.5s ease-out 0s;
-    -ms-transition: all 0.5s ease-out 0s;
-    -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
     z-index: -1;
 }
@@ -2331,10 +2355,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     border-radius: 100px;
     top: -11px;
     left: -11px;
-    -moz-transition: all 0.5s ease-out 0s;
-    -webkit-transition: all 0.5s ease-out 0s;
-    -ms-transition: all 0.5s ease-out 0s;
-    -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
     z-index: -1;
 }
@@ -2387,10 +2407,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     border-radius: 100px;
     right: -11px;
     bottom: -11px;
-    -moz-transition: all 0.5s ease-out 0s;
-    -webkit-transition: all 0.5s ease-out 0s;
-    -ms-transition: all 0.5s ease-out 0s;
-    -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
     z-index: -1;
 }
@@ -2404,10 +2420,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     border-radius: 100px;
     top: -11px;
     left: -11px;
-    -moz-transition: all 0.5s ease-out 0s;
-    -webkit-transition: all 0.5s ease-out 0s;
-    -ms-transition: all 0.5s ease-out 0s;
-    -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
     z-index: -1;
 }
@@ -2564,6 +2576,208 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
         bottom: 0;
         right: 0;
     }
+}
+
+/*----------------------------------------*/
+/*  1.16 Blog Area Styles
+/*----------------------------------------*/
+
+.blog-area {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.blog-title-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.blog-title-wrapper .blog-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4F46E5;
+    background: #EEF2FF;
+    padding: 8px 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.blog-title-wrapper .blog-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+    .blog-title-wrapper .blog-title {
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    .blog-title-wrapper .blog-title br {
+        display: none;
+    }
+}
+
+.blog-title-wrapper p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 576px) {
+    .blog-title-wrapper p br {
+        display: none;
+    }
+}
+
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.blog-content .blog-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 380px;
+    max-width: 380px;
+}
+
+@media (max-width: 576px) {
+    .blog-content .blog-item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 300px;
+        max-width: 300px;
+    }
+}
+
+.blog-design {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px 28px 30px 28px;
+    border: 1px solid #c8cdd4;
+    transition: 0.3s;
+}
+
+.blog-tag-date p {
+    margin-bottom: 10px;
+}
+
+.blog-title h4 {
+    margin-bottom: 28px;
+}
+
+.blog-title h4 a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #475569;
+    transition: 0.3s;
+}
+
+.blog-title h4 a:hover {
+    color: #4F46E5;
+}
+
+.blog-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 11;
+    transition: 0.3s;
+}
+
+.blog-thumb .blog-bg-img {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    z-index: 11;
+    transition: 0.3s;
+}
+
+.blog-thumb .blog-icon-btn-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    z-index: 1111;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4F46E5;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.blog-thumb .blog-icon-btn-div:hover {
+    background: #1c10fc;
+}
+
+.blog-thumb .blog-icon-btn-div:hover img {
+    animation: moveUp 0.8s linear;
+    -webkit-animation: moveUp 0.8s linear;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(10px) translateY(-10px) scale(1);
+    }
+
+    26% {
+        opacity: 0;
+        transform: translateX(-10px) translateY(10px) scale(1);
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+}
+
+.blog-item:hover .blog-bg-img {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    z-index: 11;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.blog-item:hover .blog-thumb .blog-icon-btn-div {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.blog-text p {
+    margin-top: 20px;
 }
 
 /*----------------------------------------*/

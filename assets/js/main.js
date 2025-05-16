@@ -212,7 +212,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Define the classes you want to animate on scroll
   const animationClasses = [
     "fadeInUp",
+    "fadeInDown",
     "fadeInLeft",
+    "fadeInRight",
     "skillInLeft",
     "slideinup",
     "slideinright",
