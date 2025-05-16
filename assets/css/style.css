@@ -53,10 +53,24 @@ body {
 .container {
     max-width: 1216px;
     margin: auto;
+    overflow: hidden;
 }
 
 @media (max-width: 1260px) {
     .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.container-brand {
+    max-width: 1120px;
+    margin: auto;
+    overflow: hidden;
+}
+
+@media (max-width: 1260px) {
+    .container-brand {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -94,6 +108,374 @@ a {
     color: inherit;
     transition: all 0.3s ease-in-out;
 }
+
+/*----------------------------------------*/
+/*  1.3 Temporary Link Animation Styles
+/*----------------------------------------*/
+.tmp-link-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.tmp-link-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: #4F46E5;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.tmp-link-animation:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+
+/*----------------------------------------*/
+/*  1.3 Temporary Hover Link Styles
+/*----------------------------------------*/
+.tmp-hover-link .link {
+    position: relative;
+    display: inline;
+    /* background-image: -webkit-gradient(linear,
+            left top,
+            right top,
+            from(#232323),
+            to(#232323)); */
+    background-image: -webkit-linear-gradient(left, #232323 0%, #232323 100%);
+    background-image: -o-linear-gradient(left, #232323 0%, #232323 100%);
+    background-image: linear-gradient(to right, #232323 0%, #232323 100%);
+    background-size: 0px 2px;
+    background-position: 0px 95%;
+    -webkit-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    -o-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    padding: 0.1% 0px;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out;
+}
+
+.tmp-hover-link:hover .link {
+    background-size: 100% 2px;
+    color: #232323;
+}
+
+
+
+/*----------------------------------------*/
+/*  1.3 Temporary Hover Styles
+/*----------------------------------------*/
+.tmponhover {
+    position: relative;
+    overflow: hidden;
+}
+
+.tmponhover::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    /* background: radial-gradient(#fd2d08, transparent, transparent); */
+    background: radial-gradient(#151220, transparent, transparent);
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transition: 0.5s, top 0s, left 0s;
+    border-radius: 20px;
+}
+
+.tmponhover:hover::before {
+    opacity: 1;
+}
+
+.tmponhover::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #F8FAFC;
+    border-radius: 24px;
+}
+
+.tmponhover:hover::after {
+    background: #F8FAFC;
+}
+
+
+.tmponhover>* {
+    z-index: 2;
+    position: relative;
+}
+
+/* .tmponhover {
+    box-shadow: 2px 2px #151220;
+    transition: 0.3s;
+}
+
+.tmponhover:hover {
+    box-shadow: none;
+} */
+
+/*----------------------------------------*/
+/*  2.9 Custom Animation
+/*----------------------------------------*/
+
+.fadeInUp {
+    animation: tsFadeInUp 2s ease-out forwards;
+    animation-play-state: paused;
+}
+
+@keyframes tsFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tsslideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInLeft {
+    opacity: 0;
+    /* Start invisible */
+    animation: tsfadeInLeft 2s ease-out forwards;
+    /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tsfadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        /* Start slightly to the left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* End at original position */
+    }
+}
+
+.skillInLeft {
+    opacity: 0;
+    /* Start invisible */
+    animation: tsSkillInLeft 2s ease-out forwards;
+    /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tsSkillInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+        /* Start slightly to the left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* End at original position */
+    }
+}
+
+.slideinup {
+    -webkit-animation-name: slideinup;
+    animation-name: slideinup;
+}
+
+@keyframes slideinup {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideinright {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideindown {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slideinleft {
+    -webkit-animation-name: slideinleft;
+    animation-name: slideinleft;
+}
+
+@keyframes slideinleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidebottomright {
+    0% {
+        opacity: 0;
+        transform: translateX(100px) translateY(100px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes slidetopleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) translateY(-100px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+    0% {
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-left-color: transparent;
+    }
+
+    75% {
+        border-top-color: #fff;
+        border-left-color: #fff;
+        border-right-color: #fff;
+        border-bottom-color: transparent;
+    }
+
+    100% {
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+/*  custom image animation  */
+.img-custom-anim-right {
+    animation: img-anim-right 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    opacity: 0;
+}
+
+@keyframes img-anim-right {
+    0% {
+        transform: translateX(5%);
+        clip-path: inset(0 0 0 100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+.img-custom-anim-left {
+    animation: img-anim-left 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    opacity: 0;
+}
+
+@keyframes img-anim-left {
+    0% {
+        transform: translateX(-5%);
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+.img-custom-anim-top {
+    animation: img-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+}
+
+@keyframes img-anim-top {
+    0% {
+        transform: translateY(-5%);
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+
+/* ============================================= */
+/* Optional prep class - hides elements until animated */
+.animate-init {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* This class is added by JS to trigger your animation */
+.animate-visible {
+    opacity: 1;
+    visibility: visible;
+    animation-play-state: running;
+}
+
 
 /*----------------------------------------*/
 /*  1.3 Preloader Styles
@@ -226,15 +608,41 @@ a {
 /*----------------------------------------*/
 /*  1.4 Header Area Styles
 /*----------------------------------------*/
-#sticky-header {
-    position: fixed;
+.header-area {
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     padding: 15px 0;
-    background: #fff;
+    background: #ffffff;
     z-index: 1112;
     transition: all .3s ease-in-out;
+}
+
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 100;
+    background: #ffffff;
+    -webkit-animation: 0.7s ease-in-out 0s normal none 1 running tsfadeInDown;
+    animation: 0.7s ease-in-out 0s normal none 1 running tsfadeInDown;
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    transition: all .3s ease-in-out;
+}
+
+@keyframes tsfadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .header-all {
@@ -748,7 +1156,8 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     position: relative;
     overflow: hidden;
     padding-top: 180px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(159, 171, 240) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(138, 148, 208) 100%);
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(159, 171, 240) 100%); */
 }
 
 @media (max-width: 500px) {
@@ -757,7 +1166,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
         overflow: hidden;
         padding-top: 180px;
         padding-bottom: 60px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(159, 171, 240) 100%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(128, 146, 250) 100%);
     }
 }
 
@@ -833,6 +1242,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     position: relative;
     max-width: 100%;
     left: -50px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
 }
 
 @media (max-width: 1024px) {
@@ -850,6 +1260,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     height: auto;
     right: 10px;
     bottom: 0;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
 }
 
 @media (max-width: 992px) {
@@ -900,21 +1311,87 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 /*  1.8 Brand Area Styles
 /*----------------------------------------*/
 .brand-area {
-    padding-top: 50px;
-    padding-bottom: 48px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     text-align: center;
     background: #F8FAFC;
 }
 
-.brand-area img {
-    margin: 14px 20px;
+.brand-contentfirst {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-@media (max-width: 600px) {
-    .brand-area img {
-        max-width: 20%;
-        height: auto;
-        margin: 14px 20px;
+.brand-content-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.brand-content-left img {
+    white-space: nowrap;
+    -webkit-animation: scroll1 16s linear infinite;
+    animation: scroll1 16s linear infinite;
+    margin: 22px 20px;
+}
+
+.brand-content-left:hover img {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.brand-contentsecond {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    direction: rtl;
+}
+
+.brand-content-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.brand-content-right img {
+    white-space: nowrap;
+    -webkit-animation: scroll2 18s linear infinite;
+    animation: scroll2 18s linear infinite;
+    margin: 22px 20px;
+}
+
+.brand-content-right:hover img {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes scroll1 {
+    to {
+        -webkit-transform: translateX(-800%);
+        transform: translateX(-800%);
+    }
+}
+
+@keyframes scroll1 {
+    to {
+        -webkit-transform: translateX(-800%);
+        transform: translateX(-800%);
+    }
+}
+
+
+@-webkit-keyframes scroll2 {
+    to {
+        -webkit-transform: translateX(800%);
+        transform: translateX(800%);
+    }
+}
+
+@keyframes scroll2 {
+    to {
+        -webkit-transform: translateX(800%);
+        transform: translateX(800%);
     }
 }
 
@@ -1180,14 +1657,34 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     }
 }
 
-.statistics-content .statistics-number {
+.statistics-item {
+    position: relative;
+    min-width: 200px;
+}
+
+.statistics-item .statistics-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statistics-item h2 {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 700;
+    color: #4F46E5;
+    text-align: center;
+    min-width: fit-content;
+}
+
+.statistics-item span {
     font-size: 60px;
     font-weight: 700;
     color: #4F46E5;
     text-align: center;
 }
 
-.statistics-content h6 {
+.statistics-item h6 {
     font-size: 18px;
     font-weight: 700;
     color: #475569;
@@ -1377,6 +1874,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 .testimonialCard {
+    position: relative;
     max-width: 384px;
     height: auto;
     padding: 24px 32px;
@@ -1385,7 +1883,8 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: transparent;
+    background: #F8FAFC;
+    /* z-index: 1; */
 }
 
 .testimonial-cards-container p {
@@ -1646,10 +2145,10 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     font-size: 18px;
     font-weight: 600;
     color: #1e293b;
-    transition: 0.4s;
     display: flex;
     align-items: center;
     background: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .accordion:hover,
@@ -1670,7 +2169,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 
 .toggle-arrow {
     margin-left: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .accordion.active .toggle-arrow {
@@ -1682,6 +2181,8 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     display: none;
     background: none;
     overflow: hidden;
+    /* transition: all 0.3s ease-in-out; */
+    transition: transform 0.3s ease-in-out;
 }
 
 .panel p {
@@ -1690,10 +2191,14 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     color: #475569;
     line-height: 1.5;
     padding-bottom: 15px;
+    /* transition: all 0.3s ease-in-out; */
+    /* transition: transform 0.3s ease-in-out; */
 }
 
 .accordion.active+.panel {
     display: block;
+    /* transition: all 0.3s ease-in-out; */
+    /* transition: transform 0.3s ease-in-out; */
 }
 
 /*----------------------------------------*/

@@ -23,6 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /*=============================================
+	=    		2. Menu sticky & Scroll			      =
+=============================================*/
+  window.addEventListener("scroll", function () {
+    var scroll = window.scrollY;
+    var header = document.getElementById("sticky-header");
+
+    if (scroll < 245) {
+      header.classList.remove("sticky-menu");
+    } else {
+      header.classList.add("sticky-menu");
+    }
+  });
+
+  /*=============================================
 	=    		2. Mobile Menu			      =
 =============================================*/
   document.querySelectorAll(".header-offcanvas-toogle").forEach((button) => {
@@ -61,6 +75,45 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*=============================================
+	=    		3. Statistics Counter			      =
+=============================================*/
+
+  function animateCounter(el, target, duration = 2000, decimals = 2) {
+    let start = 0;
+    let startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = start + (target - start) * progress;
+      el.innerText = value.toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.innerText = target.toFixed(decimals); // snap to exact target
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  const counters = document.querySelectorAll(".counter");
+
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseFloat(el.dataset.target);
+          const decimals = (el.dataset.target.split(".")[1] || "").length;
+          animateCounter(el, target, 2000, decimals);
+          counterObserver.unobserve(el); // Run once
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach((counter) => counterObserver.observe(counter));
+
+  /*=============================================
 	=    		3. Client Tab			      =
 =============================================*/
   function clientContentTab() {
@@ -84,6 +137,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   clientContentTab();
+
+  /*=============================================
+	=    		Temporary Hover			 =
+=============================================*/
+
+  function animationOnHover() {
+    let cards = document.querySelectorAll(".tmponhover, .tmponhover-two");
+    cards.forEach((tmpOnHover) => {
+      tmpOnHover.addEventListener("mousemove", (e) => {
+        let rect = tmpOnHover.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        tmpOnHover.style.setProperty("--x", `${x}px`);
+        tmpOnHover.style.setProperty("--y", `${y}px`);
+        // console.log(`x: ${x}, y: ${y}`); // Debugging values
+      });
+    });
+  }
+
+  animationOnHover();
 
   /*=============================================
 	=    	4. Load More Testimonials			   =
@@ -129,6 +202,49 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.add("active");
         panel.style.display = "block";
       }
+    });
+  });
+
+  /*=============================================
+	=    		5. Split Text		      =
+=============================================*/
+
+  // Define the classes you want to animate on scroll
+  const animationClasses = [
+    "fadeInUp",
+    "fadeInLeft",
+    "skillInLeft",
+    "slideinup",
+    "slideinright",
+    "slideindown",
+    "slideinleft",
+    "slidebottomright",
+    "slidetopleft",
+    "img-custom-anim-right",
+    "img-custom-anim-left",
+    "img-custom-anim-top",
+  ];
+
+  // Create an IntersectionObserver
+  const animateOnScrollObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-visible");
+          observer.unobserve(entry.target); // Remove this line if you want it to replay on scroll
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% visible
+    }
+  );
+
+  // Apply observer to each animation element
+  animationClasses.forEach((cls) => {
+    document.querySelectorAll(`.${cls}`).forEach((el) => {
+      el.classList.add("animate-init"); // Optional class to hide or prep before scroll
+      animateOnScrollObserver.observe(el);
     });
   });
 });
