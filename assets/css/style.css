@@ -142,11 +142,6 @@ a {
 .tmp-hover-link .link {
     position: relative;
     display: inline;
-    /* background-image: -webkit-gradient(linear,
-            left top,
-            right top,
-            from(#232323),
-            to(#232323)); */
     background-image: -webkit-linear-gradient(left, #232323 0%, #232323 100%);
     background-image: -o-linear-gradient(left, #232323 0%, #232323 100%);
     background-image: linear-gradient(to right, #232323 0%, #232323 100%);
@@ -155,7 +150,7 @@ a {
     -webkit-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
     -o-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
     transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-    padding: 0.1% 0px;
+    padding: 0.98% 0px;
     background-repeat: no-repeat;
     transition: all 0.5s ease-in-out;
 }
@@ -963,11 +958,55 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     transition: 0.3s;
 }
 
+/* .header-offcanvas-social a i {} */
+
 .header-offcanvas-social a:hover {
     background: #4F46E5;
     color: #ffffff;
     border: 1px solid #4F46E5;
 }
+
+.header-offcanvas-social a:hover i {
+    animation: 0.3s toRightFromLeft forwards;
+    -webkit-animation: 0.3s toRightFromLeft forwards;
+
+    /* animation: 0.3s toLeftFromRight forwards;
+    -webkit-animation: 0.3s toLeftFromRight forwards; */
+}
+
+@keyframes toRightFromLeft {
+    49% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+
+/* @keyframes toLeftFromRight {
+    49% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+} */
 
 .header-offcanvas-btn .signup-btn {
     position: relative;
@@ -1141,14 +1180,13 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     overflow: hidden;
     padding-top: 180px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(135, 146, 214) 100%);
-    /* background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(159, 171, 240) 100%); */
 }
 
 @media (max-width: 500px) {
     .hero-area {
         position: relative;
         overflow: hidden;
-        padding-top: 180px;
+        padding-top: 100px;
         padding-bottom: 60px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgb(128, 146, 250) 100%);
     }
@@ -1450,7 +1488,12 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     max-width: 400px;
     padding: 10px 8px;
     text-align: center;
+    transition: 0.3s ease-in-out;
 }
+
+/* .feature-content .feature-item:hover {
+    margin-top: -6px;
+} */
 
 @media (max-width: 576px) {
     .feature-content .feature-item {
@@ -2812,6 +2855,8 @@ footer {
     text-align: center;
     font-size: 20px;
     color: #475569;
+    -webkit-animation: scrolltopicon 1s infinite ease-in-out alternate;
+    animation: scrolltopicon 1s infinite ease-in-out alternate;
     transition: all .3s ease-in-out;
 }
 
@@ -2822,11 +2867,11 @@ footer {
 
 .footer-bottom-wrapper .footer-scroll-top:hover i {
     color: #ffffff;
-    -webkit-animation: 0.2s toTopFromBottom forwards;
-    animation: 0.2s toTopFromBottom forwards;
+    /* -webkit-animation: 0.2s toTopFromBottom forwards;
+    animation: 0.2s toTopFromBottom forwards; */
 }
 
-@keyframes toTopFromBottom {
+/* @keyframes toTopFromBottom {
     49% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
@@ -2840,6 +2885,18 @@ footer {
 
     51% {
         opacity: 1;
+    }
+} */
+
+@keyframes scrolltopicon {
+    0% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+
+    100% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
     }
 }
 
