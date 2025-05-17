@@ -216,17 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "fadeInDown",
     "fadeInLeft",
     "fadeInRight",
-    "skillInLeft",
-    "slideinup",
-    "slideinright",
-    "slideindown",
-    "slideinleft",
-    "slidebottomright",
-    "slidetopleft",
-    "img-custom-anim-right",
-    "img-custom-anim-left",
-    "img-custom-anim-top",
-    "img-custom-anim-bottom",
   ];
 
   // Create an IntersectionObserver
