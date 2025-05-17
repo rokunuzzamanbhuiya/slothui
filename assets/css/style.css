@@ -7,20 +7,25 @@
 
     1.1 Theme Fonts
     1.2 Theme Default Styles
-    1.3 Preloader Styles
-    1.4 Header Area Styles
-    1.5 Offcanvas Area Styles
-    1.6 Mobile Menu Styles
-    1.7 Hero Area Styles
-    1.8 Brand Area Styles
-    1.9 Feature Area Styles
-    1.10 Statistics Area Styles
-    1.11 Client Area Styles
-    1.12 Testimonial Area Styles
-    1.13 Offer Area Styles
-    1.14 FAQ Area Styles
-    1.15 CTA Area Styles
-    1.16 Footer Area Styles
+    1.3 Temporary Link Animation Styles
+    1.4 Temporary Hover Link Styles
+    1.5 Temporary Hover Border Styles
+    1.6 Custom Animation Styles
+    1.7 Preloader Styles
+    1.8 Header Area Styles
+    1.9 Offcanvas Area Styles
+    1.10 Mobile Menu Styles
+    1.11 Hero Area Styles
+    1.12 Brand Area Styles
+    1.13 Feature Area Styles
+    1.14 Statistics Area Styles
+    1.15 Client Area Styles
+    1.16 Testimonial Area Styles
+    1.17 Offer Area Styles
+    1.18 FAQ Area Styles
+    1.19 CTA Area Styles
+    1.20 Blog Area Styles
+    1.21 Footer Area Styles
 	
 *******************************************/
 
@@ -135,9 +140,8 @@ a {
     transform: scaleX(1);
 }
 
-
 /*----------------------------------------*/
-/*  1.3 Temporary Hover Link Styles
+/*  1.4 Temporary Hover Link Styles
 /*----------------------------------------*/
 .tmp-hover-link .link {
     position: relative;
@@ -160,10 +164,8 @@ a {
     color: #232323;
 }
 
-
-
 /*----------------------------------------*/
-/*  1.3 Temporary Hover Styles
+/*  1.5 Temporary Hover Border Styles
 /*----------------------------------------*/
 .tmponhover {
     position: relative;
@@ -176,7 +178,6 @@ a {
     top: var(--y);
     left: var(--x);
     transform: translate(-50%, -50%);
-    /* background: radial-gradient(#fd2d08, transparent, transparent); */
     background: radial-gradient(#151220, transparent, transparent);
     width: 200%;
     height: 200%;
@@ -201,16 +202,14 @@ a {
     background: #F8FAFC;
 }
 
-
 .tmponhover>* {
     z-index: 2;
     position: relative;
 }
 
 /*----------------------------------------*/
-/*  2.9 Custom Animation
+/*  1.6 Custom Animation Styles
 /*----------------------------------------*/
-
 .fadeInUp {
     animation: customFadeInUp 2s ease-out forwards;
     animation-play-state: paused;
@@ -513,7 +512,7 @@ a {
 } */
 
 /*----------------------------------------*/
-/*  1.3 Preloader Styles
+/*  1.7 Preloader Styles
 /*----------------------------------------*/
 .loader-wrapper {
     --line-width: 5px;
@@ -641,7 +640,7 @@ a {
 }
 
 /*----------------------------------------*/
-/*  1.4 Header Area Styles
+/*  1.8 Header Area Styles
 /*----------------------------------------*/
 .header-area {
     position: relative;
@@ -854,7 +853,7 @@ a {
 }
 
 /*----------------------------------------*/
-/*  1.5 Offcanvas Area Styles
+/*  1.9 Offcanvas Area Styles
 /*----------------------------------------*/
 .header-offcanvas {
     position: fixed;
@@ -1144,7 +1143,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.6 Mobile Menu Styles
+/*  1.10 Mobile Menu Styles
 /*----------------------------------------*/
 .header-offcanvas-menu {
     margin-bottom: 40px;
@@ -1173,7 +1172,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.7 Hero Area Styles
+/*  1.11 Hero Area Styles
 /*----------------------------------------*/
 .hero-area {
     position: relative;
@@ -1330,7 +1329,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.8 Brand Area Styles
+/*  1.12 Brand Area Styles
 /*----------------------------------------*/
 .brand-area {
     padding-top: 60px;
@@ -1418,7 +1417,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.9 Feature Area Styles
+/*  1.13 Feature Area Styles
 /*----------------------------------------*/
 .feature-area {
     padding-top: 100px;
@@ -1490,10 +1489,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     text-align: center;
     transition: 0.3s ease-in-out;
 }
-
-/* .feature-content .feature-item:hover {
-    margin-top: -6px;
-} */
 
 @media (max-width: 576px) {
     .feature-content .feature-item {
@@ -1589,7 +1584,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.10 Statistics Area Styles
+/*  1.14 Statistics Area Styles
 /*----------------------------------------*/
 .statistics-area {
     padding-top: 100px;
@@ -1720,7 +1715,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.11 Client Area Styles
+/*  1.15 Client Area Styles
 /*----------------------------------------*/
 .client-area {
     padding-top: 100px;
@@ -1832,7 +1827,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.12 Testimonial Area Styles
+/*  1.16 Testimonial Area Styles
 /*----------------------------------------*/
 .testimonial-area {
     padding-top: 100px;
@@ -2004,7 +1999,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.13 Offer Area Styles
+/*  1.17 Offer Area Styles
 /*----------------------------------------*/
 .offer-area {
     padding-top: 100px;
@@ -2080,7 +2075,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.14 FAQ Area Styles
+/*  1.18 FAQ Area Styles
 /*----------------------------------------*/
 .faq-area {
     padding-top: 100px;
@@ -2228,7 +2223,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.15 CTA Area Styles
+/*  1.19 CTA Area Styles
 /*----------------------------------------*/
 .cta-area {
     position: relative;
@@ -2577,9 +2572,8 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.16 Blog Area Styles
+/*  1.20 Blog Area Styles
 /*----------------------------------------*/
-
 .blog-area {
     position: relative;
     padding-top: 100px;
@@ -2779,7 +2773,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 /*----------------------------------------*/
-/*  1.16 Footer Area Styles
+/*  1.21 Footer Area Styles
 /*----------------------------------------*/
 footer {
     background: #F8FAFC;

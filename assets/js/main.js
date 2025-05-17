@@ -9,10 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /*
   1. Preloader
-  2. Mobile Menu
-  3. Client Tab
-  4. Load More Testimonials
-  5. FAQ Accordion
+  2. Menu sticky & Scroll
+  3. Mobile Menu
+  4. Statistics Counter
+  5. Client Tab
+  6. Temporary Hover Border
+  7. Load More Testimonials	
+  8. FAQ Accordion
+  9. Custom Animation
   */
 
   /*=============================================
@@ -37,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /*=============================================
-	=    		2. Mobile Menu			      =
+	=    		3. Mobile Menu			      =
 =============================================*/
   document.querySelectorAll(".header-offcanvas-toogle").forEach((button) => {
     button.addEventListener("click", () => {
@@ -75,9 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*=============================================
-	=    		3. Statistics Counter			      =
+	=    		4. Statistics Counter			      =
 =============================================*/
-
   function animateCounter(el, target, duration = 2000, decimals = 2) {
     let start = 0;
     let startTime = null;
@@ -114,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   counters.forEach((counter) => counterObserver.observe(counter));
 
   /*=============================================
-	=    		3. Client Tab			      =
+	=    		5. Client Tab			      =
 =============================================*/
   function clientContentTab() {
     const whoContents = document.querySelectorAll(".client-content");
@@ -139,9 +142,8 @@ document.addEventListener("DOMContentLoaded", function () {
   clientContentTab();
 
   /*=============================================
-	=    		Temporary Hover			 =
+	=    		6. Temporary Hover Border			 =
 =============================================*/
-
   function animationOnHover() {
     let cards = document.querySelectorAll(".tmponhover, .tmponhover-two");
     cards.forEach((tmpOnHover) => {
@@ -159,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
   animationOnHover();
 
   /*=============================================
-	=    	4. Load More Testimonials			   =
+	=    	7. Load More Testimonials			   =
 =============================================*/
   const loadMoreBtn = document.querySelector(".loadMoreBtn");
 
@@ -180,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*=============================================
-	=    		5. FAQ Accordion			      =
+	=    		8. FAQ Accordion			      =
 =============================================*/
   document.querySelectorAll(".accordion").forEach((button) => {
     button.addEventListener("click", () => {
@@ -206,9 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /*=============================================
-	=    		5. Split Text		      =
+	=    		9. Custom Animation		      =
 =============================================*/
-
   // Define the classes you want to animate on scroll
   const animationClasses = [
     "fadeInUp",
