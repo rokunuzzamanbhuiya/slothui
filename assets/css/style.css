@@ -1156,10 +1156,26 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     gap: 40px;
 }
 
+@media (max-width: 576px) {
+    .brand-contentfirst {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
 .brand-content-left {
     display: flex;
     align-items: center;
     gap: 40px;
+}
+
+@media (max-width: 576px) {
+    .brand-content-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 .brand-content-left img {
@@ -1167,6 +1183,15 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     -webkit-animation: scroll1 16s linear infinite;
     animation: scroll1 16s linear infinite;
     margin: 22px 20px;
+}
+
+@media (max-width: 576px) {
+    .brand-content-left img {
+        white-space: nowrap;
+        -webkit-animation: scroll1 16s linear infinite;
+        animation: scroll1 16s linear infinite;
+        margin: 22px 6px;
+    }
 }
 
 .brand-content-left:hover img {
@@ -1181,10 +1206,27 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     direction: rtl;
 }
 
+@media (max-width: 576px) {
+    .brand-contentsecond {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        direction: rtl;
+    }
+}
+
 .brand-content-right {
     display: flex;
     align-items: center;
     gap: 40px;
+}
+
+@media (max-width: 576px) {
+    .brand-content-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 .brand-content-right img {
@@ -1192,6 +1234,15 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     -webkit-animation: scroll2 18s linear infinite;
     animation: scroll2 18s linear infinite;
     margin: 22px 20px;
+}
+
+@media (max-width: 576px) {
+    .brand-content-right img {
+        white-space: nowrap;
+        -webkit-animation: scroll2 18s linear infinite;
+        animation: scroll2 18s linear infinite;
+        margin: 22px 10px;
+    }
 }
 
 .brand-content-right:hover img {
@@ -2615,7 +2666,7 @@ footer {
 
 .footer-bottom-wrapper .footer-scroll-top-wrapper {
     position: absolute;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     bottom: 100px;
     z-index: 99;
