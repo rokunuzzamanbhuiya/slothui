@@ -216,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "fadeInDown",
     "fadeInLeft",
     "fadeInRight",
+    "animateZoom",
   ];
 
   // Create an IntersectionObserver

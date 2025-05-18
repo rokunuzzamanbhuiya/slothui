@@ -251,7 +251,7 @@ a {
 /*  1.6 Custom Animation Styles
 /*----------------------------------------*/
 .fadeInUp {
-    animation: customFadeInUp 2s ease-out forwards;
+    animation: customFadeInUp 1s ease-out forwards;
     animation-play-state: paused;
 }
 
@@ -268,7 +268,7 @@ a {
 }
 
 .fadeInDown {
-    animation: customFadeInDown 2s ease-out forwards;
+    animation: customFadeInDown 1s ease-out forwards;
     animation-play-state: paused;
 }
 
@@ -285,7 +285,7 @@ a {
 }
 
 .fadeInLeft {
-    animation: customfadeInLeft 2s ease-out forwards;
+    animation: customfadeInLeft 1s ease-out forwards;
     animation-play-state: paused;
 }
 
@@ -302,7 +302,7 @@ a {
 }
 
 .fadeInRight {
-    animation: customfadeInRight 2s ease-out forwards;
+    animation: customfadeInRight 1s ease-out forwards;
     animation-play-state: paused;
 }
 
@@ -315,6 +315,23 @@ a {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+.animateZoom {
+    animation: zoomInOut 1s ease-out forwards;
+    animation-play-state: paused;
+}
+
+@keyframes zoomInOut {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -333,10 +350,10 @@ a {
 /*----------------------------------------*/
 .loader-wrapper {
     --line-width: 5px;
-    --curtain-color: #e6f7e0;
-    --outer-line-color: #92d2d4;
-    --middle-line-color: #4eaeea;
-    --inner-line-color: #006aff;
+    --curtain-color: #eef9ea;
+    --outer-line-color: #87f7fa;
+    --middle-line-color: #39aff8;
+    --inner-line-color: #4F46E5;
     position: fixed;
     top: 0;
     left: 0;
@@ -1710,7 +1727,7 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 
 .testimonialCardImg {
     width: 50%;
-    height: 50%;
+    height: auto;
     object-fit: contain;
 }
 
@@ -1837,13 +1854,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 .offer-content {
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 65px; */
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 4fr));
     margin: auto;
@@ -2420,18 +2430,23 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
 }
 
 .blog-content {
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 32px; */
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     margin: auto;
     align-items: start;
     gap: 32px;
     padding-bottom: 4px;
+}
+
+@media (max-width: 340px) {
+    .blog-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 3fr));
+        margin: auto;
+        align-items: start;
+        gap: 32px;
+        padding-bottom: 4px;
+    }
 }
 
 .blog-content .blog-item {
@@ -2444,18 +2459,6 @@ only screen and (min-width: 200px) and (max-width: 575.98px) {
     flex: 1 0 400px;
     max-width: 800px;
 }
-
-/* @media (max-width: 576px) {
-    .blog-content .blog-item {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex: 1 0 300px;
-        max-width: 300px;
-    }
-} */
 
 .blog-design {
     background: #ffffff;
@@ -2578,12 +2581,6 @@ footer {
 }
 
 .footer-top {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 100px 0 40px 0; */
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 6fr));
     margin: auto;
@@ -2591,13 +2588,6 @@ footer {
     gap: 30px;
     padding: 100px 0 40px 0;
 }
-
-/* @media (max-width: 1050px) {
-    .footer-top {
-        column-gap: 180px;
-        row-gap: 20px;
-    }
-} */
 
 .footer-top h6 {
     font-size: 16px;
